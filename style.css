@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background-image: url(log.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+nav {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.7;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+}
+nav .mainMenu li a:hover {
+  background: rgb(255, 94, 0);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+
+nav .logo {
+  margin: 6px;
+  font-size: 25px;
+  cursor: pointer;
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+#welcome {
+  text-align: center;
+  font-size: 4em;
+  color: #ffdd1b;
+  font-family: Pacifico;
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+}
+
+.neon {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*glow for webkit*/
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+      0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+      0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+  }
+}
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+      0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+      0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+  }
+}
+
+/*glow*/
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+      0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b, 0 0 150px #ffdd1b;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+      0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+  }
+}
+
+/*REEEEEEEEEEESPONSIVE*/
+
+@media (max-width: 650px) {
+  #container {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
+.center{
+  display:flex;
+  text-align: center;
+  align-items:center;
+  justify-content:center;
+}
+.outer:hover{
+  background:linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+  animation:rotate 1.5s linear infinite;
+}
+.outer{
+  position:relative;
+  margin:0 50px;
+  background:#111;
+}
+.button{
+  height:70px;
+  width:220px;
+  border-radius:50px;
+}
+.outer .button, .outer span{
+  position:absolute;
+  top:50%;
+  left:50px;
+  transform: translate(-50%,-50%);
+}
+.outer .button{
+  background:#111;
+  color:#f2f2f2;
+  outline: none;
+  border: none;
+  font-size:20px;
+  z-index:9;
+  letter-spacing: 1px;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.button button{
+  height:60px;
+  width:210px;
+  border-radius:50px;
+}
+.outer span{
+  height:100%;
+  width:100%;
+  background:inherit;
+}
+.button span{
+  border-radius:50px;
+}
+.outer:hover span:nth-child(1){
+  filter:blur(14px);
+}
+.outer{
+  animation:rotate 1.5s linear inifinte;
+}
+@keyframes rotate{
+  0%{
+    filter:hue-rotate(0deg);
+  }
+  100%{
+    filter:hue-rotate(360deg);
+  }
+}

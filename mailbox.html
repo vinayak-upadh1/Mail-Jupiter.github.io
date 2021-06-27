@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style (2).css">
+    <title>Mail</title>
+    <script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+    <div class="container">
+<div class="title">Welcome To JupiterMail</div>
+<div class="sub-container">
+    <form name="myform" onsubmit="return validateForm()" method="post">
+<div class="form">
+<label for="">From : </label>
+<input type="text" name="fname" class="input" placeholder="xyz@gmail.com">
+</div>
+<div class="form">
+    <label for="">To : </label>
+    <input type="text" class="input" placeholder="xyz@gmail.com">
+</div>
+<div class="form">
+    <label for="">Cc : </label>
+    <input type="text" class="input" placeholder="xyz@gmail.com">
+</div>
+<div class="form">
+    <label for="">Bcc: </label>
+    <input type="text" class="input" placeholder="xyz@gmail.com">
+</div>
+<div class="form" id="sub">
+    <label for="">Subject : </label>
+    <textarea class="input" name="message" row="1" cols="20" ></textarea>
+</div>
+
+<div class="form">
+    <label for="">Compose Mail : </label>
+    <textarea  class="input" name="message" row="20" cols="20" ></textarea>
+</div>
+
+<div class="btn">Send Mail</div>
+</form>
+    </div>
+</body>
+</html>
