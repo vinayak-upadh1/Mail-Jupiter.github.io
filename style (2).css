@@ -5,23 +5,30 @@
   padding: 0;
 }
 body {
-  background-image: url(gip2.gif);
+  /* background-image: url(gip2.gif); */
+  /* background-image:linear-gradient()); */
+  /* background:  black; */
   font-family: Arial, Helvetica, sans-serif;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-position-y: center;
+  /* color: red; */
+
 }
 .container {
   width: 40%;
-  height:80%;
+  /* height:80vh; */
   margin: 150px auto 0;
-  background: black;
+  margin-top: 40px;
+  /* background: red; */
   opacity: 0.6;
-  padding: 40px;
+  padding: 20px;
   box-sizing: border-box;
-  height: auto;
+  height: 80vh;
   position: relative;
-  box-shadow: 0 0 10px rgba(150, 150, 150, 0.5);
+  box-shadow: 0px 0px 40px 20px rgba(0,0,0,0.26);
+  font-weight: bold;
 }
 .title {
   position: absolute;
@@ -36,6 +43,23 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+@media(max-width:700px)
+{
+  .container{
+    width:50vh;
+    height:60vh;
+    padding: 20px;
+    margin-top: 100px;
+  }
+  body{
+    /* background-size: 90%; */
+    /* background-position: 100vh; */
+    background-size: auto;
+    background-repeat: repeat-y;
+  }
+}
+  
+
 .title:before {
   content: "";
   position: absolute;
@@ -49,7 +73,7 @@ body {
 .sub-container {
   padding-top: 30px;
   height: 8cm;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .form {
   width: 100%;
@@ -72,6 +96,7 @@ body {
   border-radius: 3px;
 }
 .btn {
+  margin-left: 12px;
   width: 95%;
   background:red;
   height: 40px;
@@ -95,8 +120,8 @@ body {
   font-family: "open sans", sans-serif;
 }
 .btn:hover {
-  -ms-transform: scale(1.1); /* IE 9 */
-  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  /* -ms-transform: scale(1.1); /* IE 9 */
+  /* -webkit-transform: scale(1.1); Safari 3-8 */
   transform: scale(1.1);
   background-color: #01c2c2;
 }
